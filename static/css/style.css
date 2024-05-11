@@ -50,6 +50,11 @@ h6 {
   transition: all 0.4s;
 }
 
+.custom-image-size {
+    width: 50%;
+    height: auto;
+}
+
 .back-to-top i {
   font-size: 28px;
   color: #fff;
