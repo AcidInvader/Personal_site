@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  app:
+    build: Personal_Site/
+    restart: always
+    ports:
+      - 5000:5000
