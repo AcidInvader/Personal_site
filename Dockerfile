@@ -8,7 +8,9 @@ WORKDIR /usr/src/app
 COPY . .
 
 # Install any needed packages specified in requirements.txt
+RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install gunicorn
 
 # Make port 5000 available to the world outside this container
 EXPOSE 5000

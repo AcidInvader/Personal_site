@@ -2,7 +2,23 @@ version: "3"
 
 services:
   app:
-    build: Personal_Site/
+    build: .
     restart: always
     ports:
       - 5000:5000
+    networks:
+      - webnet
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "80:80"
+    depends_on:
+      - app
+    networks:
+      - webnet
+
+networks:
+  webnet:
