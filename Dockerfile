@@ -16,8 +16,8 @@ RUN pip install gunicorn
 EXPOSE 5000
 
 # Define environment variable
-ENV FLASK_APP=app.py
-ENV FLASK_RUN_HOST=0.0.0.0
+#ENV FLASK_APP=app.py
+#ENV FLASK_RUN_HOST=0.0.0.0
 
 RUN chmod a+x ./run.sh
 
